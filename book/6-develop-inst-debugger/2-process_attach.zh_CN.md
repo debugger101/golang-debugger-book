@@ -59,10 +59,10 @@ const (
 )
 
 func main() {
-	// issue: https://github.com/golang/go/issues/7699
+    // issue: https://github.com/golang/go/issues/7699
     //
-	// 为什么syscall.PtraceDetach, detach error: no such process?
-	// 因为ptrace请求应该来自相同的tracer线程，
+    // 为什么syscall.PtraceDetach, detach error: no such process?
+    // 因为ptrace请求应该来自相同的tracer线程，
     // 
     // ps: 如果恰好不是，可能需要对tracee的状态显示进行更复杂的处理，需要考虑信号？
     // 目前看系统调用传递的参数是这样。
